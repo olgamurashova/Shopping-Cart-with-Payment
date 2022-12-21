@@ -7,17 +7,55 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Permanent+Marker&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 
 <body>
+
+    <!--Main Container-->
+
+    <main class="container">
+        <h1 class="heading">
+            <i class='bx bx-cart'></i>Shopping Cart
+        </h1>
+
+        <div class="item-flex">
+
+            <!--CHECKOUT SECTION-->
+            <section class="checkout">
+                <h2 class="section-heading">Payment Details</h2>
+
+                <div class="payment-form">
+                    <div class="payment-method">
+
+                        <button class="method selected">
+                            <i class='bx bx-credit-card'></i>
+                            <span>Credit Card</span>
+                            <i class='bx bxs-check-circle' name="checkmark-circle"></i>
+                        </button>
+
+                        <button class="method">
+                            <i class='bx bxl-paypal'></i>
+                            <span>PayPal</span>
+                            <i class='bx bxs-check-circle' name="checkmark-circle"></i>
+                        </button>
+
+
+                    </div>
+                </div>
+
+
+
+            </section>
+        </div>
+    </main>
    
     
 
 
 
     <script src="main.js"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    
 </body>
 </html>

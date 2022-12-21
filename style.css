@@ -54,7 +54,7 @@ button {
     cursor: pointer;
 }
 
-ion-icon, span {
+bx-cart, bx-credit-card, bxs-check-circle, bxl-paypal, span {
     display: inline-block;
 }
 
@@ -91,3 +91,5 @@ input::-webkit-outer-spin-button {
     background: hsl(0, 0%, 80%);
     border-radius: 10px;
 }
+
+::-webkit-scrollbar-thumb:hover {background: hsl(0, 0%, 70%);}
