@@ -65,7 +65,7 @@ label, img {
 input {
     font: inherit;
     width: 100%;
-    border: none;
+    /*border: none;*/
 }
 
 input:focus {
