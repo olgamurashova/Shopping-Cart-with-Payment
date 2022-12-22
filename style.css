@@ -54,7 +54,7 @@ button {
     cursor: pointer;
 }
 
-bx-cart, bx-credit-card, bxs-check-circle, bxl-paypal, bx-trash-alt, span {
+bx-cart, bx-credit-card, bxs-check-circle, bxl-paypal, bx-trash-alt, bx-plus-circle, bx-x-circle, span {
     display: inline-block;
 }
 
