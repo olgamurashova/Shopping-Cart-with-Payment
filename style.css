@@ -54,7 +54,7 @@ button {
     cursor: pointer;
 }
 
-bx-cart, bx-credit-card, bxs-check-circle, bxl-paypal, bx-trash-alt, bx-plus-circle, bx-x-circle, span {
+bx-cart, bx-credit-card, bxs-check-circle, bxl-paypal, bx-minus-circle, bx-plus-circle, bx-x-circle, span {
     display: inline-block;
 }
 
@@ -220,7 +220,40 @@ input::-webkit-outer-spin-button {
 
 }
 
-.input-flex .expire-date {
+ .expire-date .input-flex {
     color: var(--spanish-gray);
     gap: 13px;
 }
+
+.expire-date .input-flex input {
+    text-align: center;
+}
+
+.btn {
+    border-radius: var(--radius);
+}
+
+.btn:active {
+    transform: scale(0.99);
+}
+
+.btn:focus {
+    color: var(--white);
+    background: var(--azure);
+    outline: 2px solid var(--azure);
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: var(--azure);
+    font-weight: var(--fw-5);
+    color: var(--white);
+    padding: 13px 45px;
+}
+
+.btn-primary b {
+    margin-right: 10px;
+
+}
+
+/*CART SECTION*/
