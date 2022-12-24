@@ -65,7 +65,7 @@ label, img {
 input {
     font: inherit;
     width: 100%;
-    /*border: none;*/
+    border: none;
 }
 
 input:focus {
@@ -183,4 +183,44 @@ input::-webkit-outer-spin-button {
     margin-bottom: 5px;
     font-size: var(--fs-14);
     color: var(--spanish-gray);
+}
+
+.input-default {
+    background: var(--platinum);
+    border-radius: var(--radius);
+    color: var(--davys-gray);
+    margin-bottom: 5px; 
+}
+
+.payment-form input {
+    padding: 10px 15px;
+    font-size: var(--fs-18);
+    font-weight: var(--fw-5);
+}
+
+.cardholder-name, .card-number {
+    margin-bottom: 20px;
+
+}
+
+.cardholder-name input, .cvv input {
+    letter-spacing: 3px;
+
+}
+
+.input-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.input-flex .expire-date,
+.input-flex .cvv
+ {width: 50%;
+
+}
+
+.input-flex .expire-date {
+    color: var(--spanish-gray);
+    gap: 13px;
 }
