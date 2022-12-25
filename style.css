@@ -371,3 +371,20 @@ input::-webkit-outer-spin-button {
     background: var(--azure);
     color: var(--white);
 }
+
+.amount {
+    padding: 40px var(--px);
+}
+
+.amount > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.amount > div:not(:last-child) { margin-bottom: 10px;}
+
+.amount .total {
+    font-size: var(--fs-18);
+    font-weight: var(--fw-7);
+    color: var(--onyx);
+}
