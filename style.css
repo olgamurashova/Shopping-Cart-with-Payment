@@ -310,5 +310,35 @@ input::-webkit-outer-spin-button {
     background: var(--platinum);
     width: 20px;
     height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.product-qty button:active, 
+.product-close-btn:active {
+    transform: scale(0.95);
+
+}
+
+.product-qty button i {
+    --ionicon-stroke-width: 60px;
+    font-size: 10px;
+}
+
+.product-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.product-close-btn .bx-x-circle {
+    font-size: 25px;
+    color: var(--quick-silver);
+   
+}
+
+.product-close-btn:hover .bx-x-circle {
+    color: var(--red-salsa);
 }
