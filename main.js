@@ -36,7 +36,17 @@ for (let i = 0; i < incrementBtn.length; i ++) {
 
     });
 
-    decrementBtn[i].addEventListener9("click", function () {
+    decrementBtn[i].addEventListener("click", function () {
+         //collect the value of 'quantity' textContent based on clicked "decrement" button sibling
+         let decrement = Number(this.nextElementSibling.textContent);
+
+         //minus 'decrement' variable value by 1 based on condition
+         decrement <= 1 ? 1 : decrement--;
+
+         //show "decrement" variable value on 'quantity' element based on clicked "decrement" button sibling
+         this.nextElementSibling.textContent = decrement;
 
     });
 }
+
+//function for calculating total amount of product price
