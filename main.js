@@ -33,6 +33,7 @@ for (let i = 0; i < incrementBtn.length; i ++) {
 
         //show "increment" variable value on 'quantity' element based on clicked "increment" button sibling
         this.previousElementSibling.textContent = increment;
+        totalCalc();
 
     });
 
@@ -45,8 +46,46 @@ for (let i = 0; i < incrementBtn.length; i ++) {
 
          //show "decrement" variable value on 'quantity' element based on clicked "decrement" button sibling
          this.nextElementSibling.textContent = decrement;
+         totalCalc();
 
     });
 }
 
 //function for calculating total amount of product price
+
+const totalCalc = function() {
+    //declare all initial variables 
+
+    let tax = 0.05;
+    let subtotal = 0;
+    let totalTax = 0;
+    let total = 0;
+
+    //loop for calculating 'subtotal' value from every single element
+
+    for (let i = 0; i < quantiytEl.length; i++) {
+        subtotal += Number(quantiytEl[i].textContent) * Number(price[i].textContent);
+
+    }
+
+    //show the 'subtotal' variable value on 'subtotal' element 
+    subtotal.textContent = subtotal.toFixed(2);
+
+    //claculating subtotal tax
+
+    totalTax = subtotal * tax;
+
+    //show the totaltax on tax element 
+
+    tax.textContent = totalTax.toFixed(2);
+
+    //calculating the total 
+
+    total = subtotal + totalTax;
+
+    //show the 'total' variable value on 'total' element & 'payAmountBtn' 
+
+    total.textContent = total.toFixed(2);
+    payAmountBtn.textContent = total.toFixed(2);
+
+}
