@@ -6,19 +6,19 @@ const payAmountBtn = document.querySelector('#payAmount');
 
 const decrementBtn = document.querySelectorAll('#decrement');
 
-const quantiytEl = document.querySelectorAll('#quantity');
+const quantitytEl = document.querySelectorAll('#quantity');
 
 const incrementBtn = document.querySelectorAll('#increment');
 
 const price = document.querySelectorAll('#price');
 
-const subtotal = document.querySelectorAll('#subtotal');
+const subtotalEl = document.querySelector('#subtotal');
 
-const tax = document.querySelectorAll('#tax');
+const taxEl = document.querySelector('#tax');
 
-const shipping = document.querySelectorAll('#shipping');
+const shipping = document.querySelector('#shipping');
 
-const total = document.querySelectorAll('#total');
+const totalEl = document.querySelector('#total');
 
 //loop: for add event on multiple "increment" & "decrement" buttons
 
@@ -63,29 +63,28 @@ const totalCalc = function() {
 
     //loop for calculating 'subtotal' value from every single element
 
-    for (let i = 0; i < quantiytEl.length; i++) {
-        subtotal += Number(quantiytEl[i].textContent) * Number(price[i].textContent);
+    for (let i = 0; i < quantitytEl.length; i++) {
+        subtotal += Number(quantitytEl[i].textContent) * Number(price[i].textContent);
 
     }
 
-    //show the 'subtotal' variable value on 'subtotal' element 
-    subtotal.textContent = subtotal.toFixed(2);
+//show the 'subtotal' variable value on 'subtotal' element 
+    subtotalEl.textContent = subtotal.toFixed(2);
 
-    //claculating subtotal tax
+//claculating subtotal tax
 
     totalTax = subtotal * tax;
 
-    //show the totaltax on tax element 
+//show the totaltax on tax element 
+    taxEl.textContent = totalTax.toFixed(2);
 
-    tax.textContent = totalTax.toFixed(2);
-
-    //calculating the total 
+//calculating the total 
 
     total = subtotal + totalTax;
 
-    //show the 'total' variable value on 'total' element & 'payAmountBtn' 
+//show the 'total' variable value on 'total' element & 'payAmountBtn' 
 
-    total.textContent = total.toFixed(2);
+    totalEl.textContent = total.toFixed(2);
     payAmountBtn.textContent = total.toFixed(2);
 
 }
